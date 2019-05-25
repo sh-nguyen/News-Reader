@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+{% endblock %}
+{% block title %}
+<title>About</title>
+{% endblock %}
+
+{% block content %}
+<div>
+        <h1>About this site.</h1>
+        <p>A Tinder-esque news viewer.</p>
+        <p>By Sang Nguyen | Articles provided by ABC News</p>
+        <a class="btn bg-light" href="https://www.linkedin.com/in/sanghuenguyen/"><img class="icon" src="https://static.licdn.com/sc/h/eahiplrwoq61f4uan012ia17i">LinkedIn</a> 
+        <a class="btn bg-light" href="https://www.facebook.com/sangnguyen898"><img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/yo/r/iRmz9lCMBD2.ico">Facebook</a> 
+</div>
+{% endblock %}

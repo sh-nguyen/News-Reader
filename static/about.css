@@ -1,0 +1,23 @@
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+}
+
+main {
+    max-width: 42em;
+    align-self: center;
+    margin-top: 15em;
+}
+
+.icon {
+    width: 2em;
+    height: 2em;
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
