@@ -9,8 +9,6 @@ app.config['SECRET_KEY'] = 'secret'
 app.config['DEBUG'] = True
 socketio = SocketIO(app)
 
-feed = feedparser.parse('https://www.abc.net.au/news/feed/51120/rss.xml')
-
 articles = dict()
 
 
@@ -39,7 +37,9 @@ def handle_message():
     sid = request.cookies.get('sid')
 
     if sid not in articles:
-        articles[sid] = iter(feed.entries)
+        articles[sid] = iter(
+            feedparser.parse(
+                'https://www.abc.net.au/news/feed/51120/rss.xml').entries)
 
     article = next(articles[sid])
     emit('article', {'data': article})
